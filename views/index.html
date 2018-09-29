@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button>点我进行测试</button>
+  </body>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    const type = 'api45003';
+    const qid = Date.now();
+    const base = '/lvyouju';
+    const url = `${base}?type=${type}&qid=${qid}`;
+    const data = {
+      csuid: 'hahade hahha',
+      query: {
+        "type": 0,
+        "name": "haha",
+        "dmo": "lv001",
+        "curriculum": [
+          {
+            "name": "777",
+            "id": ""
+          },
+          {
+            "name": "yurtr",
+            "id": ""
+          },
+          {
+            "name": "ifgsdfas",
+            "id": ""
+          }
+        ],
+        "certificate_setting": {
+          "id": "string"
+        }
+      }
+    }
+    $('button').on('click', () => {
+      $.ajax({
+        type: 'POST',
+        url,
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        success: (res) => {
+          console.log(res);
+        }
+      })
+    });
+  </script>
+</html>
