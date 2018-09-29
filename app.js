@@ -10,6 +10,7 @@ const router = require('./routes');
 connectMongo();
 const app = new Koa();
 
+
 // Must be used before any router is used
 app.use(views(`${__dirname}/views`, {
   map: {
