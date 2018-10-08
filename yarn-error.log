@@ -1,0 +1,70 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.0.2/libexec/bin/yarn.js install
+
+PATH: 
+  /Users/jyx/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.0.2
+
+Node version: 
+  8.5.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "lvyouju",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon --inspect app.js",
+      "online": "node app.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git@gitlab.uc.online:front/lvyouju.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@koa/cors": "^2.2.2",
+      "ejs": "^2.6.1",
+      "koa": "^2.5.2",
+      "koa-bodyparser": "^4.2.1",
+      "koa-compress": "^3.0.0",
+      "koa-router": "^7.4.0",
+      "koa-views": "^6.1.4",
+      "koa-xml-body": "^2.0.0",
+      "lodash": "^4.17.10",
+      "mongoose": "^5.2.10",
+      "nodemon": "^1.18.4",
+      "pm2": "^3.1.2"
+    },
+    "devDependencies": {
+      "babel-eslint": "^9.0.0",
+      "eslint": "^5.4.0",
+      "eslint-config-airbnb": "^17.1.0",
+      "eslint-plugin-compat": "^2.5.1",
+      "eslint-plugin-import": "^2.14.0",
+      "eslint-plugin-jsx-a11y": "^6.1.1",
+      "eslint-plugin-react": "^7.11.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: http://registry.npmjs.org/@koa%2fcors: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/Cellar/yarn/1.0.2/libexec/lib/cli.js:118034:19)
+      at ontimeout (timers.js:469:11)
+      at tryOnTimeout (timers.js:304:5)
+      at Timer.listOnTimeout (timers.js:264:5)

@@ -3,11 +3,12 @@ const bodyParser = require('koa-bodyparser');
 const compress = require('koa-compress');
 const cors = require('@koa/cors');
 const views = require('koa-views');
+const xmlParser = require('koa-xml-body');
 
 const connectMongo = require('./mongodb/connect');
 const router = require('./routes');
 
-connectMongo();
+// connectMongo();
 const app = new Koa();
 
 
@@ -23,6 +24,7 @@ app
     jsonLimit: '16mb',
     textLimit: '5mb',
   }))
+  .use(xmlParser())
   .use(compress())
   .use(cors({
     origin: '*',
@@ -30,4 +32,4 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 
-app.listen(4000);
+app.listen(80);
