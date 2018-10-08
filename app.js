@@ -19,12 +19,12 @@ app.use(views(`${__dirname}/views`, {
   },
 }));
 app
+  .use(xmlParser())
   .use(bodyParser({
     formLimit: '5mb',
     jsonLimit: '16mb',
     textLimit: '5mb',
   }))
-  .use(xmlParser())
   .use(compress())
   .use(cors({
     origin: '*',
